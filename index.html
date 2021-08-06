@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+    <h1>Hello World.</h1>
+
+</body>
+
+<script>
+var socket = io();
+
+socket.on('connect', () => console.log("connected, index.html", socket.id));
+socket.on('foo', (arg) => console.log(arg))
+socket.emit('hello', 'world');
+
+
+
+</script>
